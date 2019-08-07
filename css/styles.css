@@ -1,0 +1,160 @@
+@font-face {
+    font-family:"Pacifico";
+    src:url("../fonts/Pacifico/Pacifico-Regular.ttf");
+    font-style: italic;
+}
+@font-face{
+    font-family:'Dancing Script', cursive;
+    src: url("../fonts/Pacifico/Pacifico-Regular.ttf")
+}
+@keyframes contenido_animado{
+    0%{
+        position:relative;
+        margin-top:150%
+    }
+    60%{
+        position:relative;
+        margin-top:-5%;
+    }
+    100%{
+        position:relative;
+        margin-top:0;
+    }
+}
+body{
+    background-color: #02010a;
+    margin:0;
+    font-family:"Pacifico";
+}
+#contenido{
+    animation-name: contenido_animado;
+    animation-duration: 1.5s;
+    margin:auto;
+    margin-top:0;
+    width:900px;
+}
+header{
+    /* overflow:hidden; */
+    background-color: #5b7989;
+    color: white;
+    border-radius: 10px 10px 0 0;
+
+}
+#titulo{
+    display:inline-block;
+    margin:0;
+}
+h1{
+    margin:0;
+    text-shadow: 2px 2px 5px #02010a;
+    padding:0.3em;
+}
+h2{
+    margin:0;
+    font-size: 1em;
+}
+.section_1{
+    background-color: #82c3a6;
+    text-align: center;
+}
+.section_2{
+    background-color: #d5c75f;
+    padding-bottom: 4vh;
+    text-align: center;
+    display:flex;
+}
+.section_2 a{
+    color:#000;
+}
+.section_1 #img_velero{
+    margin-top:5vh;
+    margin-bottom:5vh;
+    width:70%;
+}
+#img_retrato{
+    width:75%;
+    border:solid 3px black;
+    margin-top:5vh;
+    transition: transform 1s;
+}
+#img_retrato:hover{
+    transform: translateX(20px) translateY(-5px)
+}
+#img_cataratas{
+    width:75%;
+    border:solid 3px black;
+    margin-top:5vh;
+    transition: transform 1s;
+}
+#img_cataratas:hover{
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 5px #82C3A6;
+}
+#sec_cataratas, #sec_retrato{
+    width:50%;
+}
+#menu{
+    float: right;
+    padding:1.4em;
+}
+#menu a{
+    color:white;
+}
+.menu #index{
+    text-decoration-line: none;
+}
+#enlace_paisajes, #enlace_retratos{
+    display:inline-block;
+    text-align: center;
+}
+footer{
+    display: flex;
+    /* justify-content: space-around; */
+    background-color:#C6d5c5;
+}
+#redes_sociales > a img{
+    width: 20px;
+}
+.info{
+    padding: 2%;
+    /* overflow:hidden; */
+    width:25%;
+}
+.info > a{
+    display:block;
+    font-size: 0.8em;
+}
+@media (max-width:600px){
+    body{
+        text-align: center;
+    }
+    #contenido{
+        width:100%
+    }
+    #titulo{
+        display: block;
+    }
+    #menu{
+        float: none;
+        margin-top:0;
+        padding:0.3em;
+    }
+    .section_2{
+        display: block;  
+    }
+    #img_cataratas, #img_retrato{
+        width:50%;  
+    }
+    #sec_cataratas, #sec_retrato{
+        width:100%;
+        margin:auto;
+    }
+    footer{
+        display:block;
+    }
+    .info{
+        width:100%;
+        text-align:left;
+        padding-left: 4vw;
+    }
+}
